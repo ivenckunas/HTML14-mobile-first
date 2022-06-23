@@ -6,6 +6,10 @@ html {
   margin-bottom: 500px;
 }
 
+body {
+  background-color: rgb(224, 224, 224);
+}
+
 p {
   font-size: 16px;
 }
@@ -20,7 +24,8 @@ body {
   background-color: rgb(245, 245, 245);
 }
 
-.u-card {
+.u-card,
+.cta {
   text-align: center;
   color: #999999;
   border-bottom: 1px solid #999999;
@@ -37,15 +42,61 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.u-card__title {
+.u-card__title,
+.cta__title {
   font-weight: normal;
   font-size: 1.4rem;
+}
+
+.cta__divider {
+  height: 1px;
+  width: 10%;
+  margin: 30px auto;
+  background-color: #999999;
+}
+
+.cta__btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.cta__btn-download,
+.cta__btn-more {
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.cta__btn-download {
+  background-color: rgb(43, 132, 204);
+  color: white;
 }
 
 @media screen and (min-width: 650px) {
   .user-section {
     padding: 0 6%;
   }
+
+  .cta {
+    padding: 3rem;
+  }
+
+  .cta__btns {
+    flex-direction: row;
+    gap: 15px;
+    padding: 3% 6%;
+  }
+
+  .cta__btn-download,
+  .cta__btn-more {
+    padding: 0.5rem 3rem;
+  }
+
   .u-card {
     text-align: left;
     display: grid;
