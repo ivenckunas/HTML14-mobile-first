@@ -6,7 +6,15 @@ html {
   margin-bottom: 500px;
 }
 
+body {
+  background-color: rgb(245, 245, 245);
+}
+
 /* User cards =================== */
+
+.user-section {
+  background-color: rgb(245, 245, 245);
+}
 
 .u-card {
   text-align: center;
@@ -28,4 +36,34 @@ html {
 .u-card__title {
   font-weight: normal;
   font-size: 1.4rem;
+}
+
+@media screen and (min-width: 650px) {
+  .user-section {
+    padding: 0 6%;
+  }
+  .u-card {
+    text-align: left;
+    display: grid;
+    column-gap: 1.8rem;
+    grid-template-columns: 30% auto;
+  }
+  .u-card--rtl {
+    grid-template-columns: auto 30%;
+    text-align: right;
+  }
+  .u-card--rtl .u-card__image {
+    grid-column: 2 / span 1;
+    grid-auto-flow: dense;
+  }
+  .u-card__image {
+    grid-row: span 2;
+    width: 100%;
+    height: initial;
+    aspect-ratio: 1;
+  }
+
+  .u-card__title {
+    align-self: flex-end;
+  }
 }
