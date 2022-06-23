@@ -6,6 +6,10 @@ html {
   margin-bottom: 500px;
 }
 
+p {
+  font-size: 16px;
+}
+
 body {
   background-color: rgb(245, 245, 245);
 }
@@ -54,7 +58,10 @@ body {
   }
   .u-card--rtl .u-card__image {
     grid-column: 2 / span 1;
-    grid-auto-flow: dense;
+  }
+
+  .u-card--rtl .u-card__title {
+    grid-row: 1;
   }
   .u-card__image {
     grid-row: span 2;
@@ -65,5 +72,11 @@ body {
 
   .u-card__title {
     align-self: flex-end;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  p {
+    font-size: 18px;
   }
 }
