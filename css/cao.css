@@ -70,6 +70,7 @@ footer {
   header a {
     display: inline;
   }
+
   .header {
     max-width: 850px;
     display: flex;
